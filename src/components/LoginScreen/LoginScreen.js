@@ -174,7 +174,7 @@ Password:  this.state.password
         var user = responseJson.user;
         console.log("message"+responseJson.message);
         console.log("user"+responseJson.user);
-        if (message === 'internal server error!' || message === ' email or password wrong!' || message === 'register please!') {
+        if (message === 'User Not Found !' || message === ' Email or Password wrong!' || message === 'Register Please!') {
                  Toast.show(message); 
                   } else  {
                 (message === 'undefined')

@@ -97,7 +97,7 @@ rapidID: this.state.phone,
         var message = responseJson.message;
         console.log('token'+ token);
         console.log("message" + message);
-         if (message === 'register please!' || message === 'register please!') {
+         if (message === 'Register Please!' || message === 'Wrong RapidID') {
                   Toast.show(message); 
                    }
                         else {

@@ -199,7 +199,7 @@ rapidID:member
         console.log("growable"+responseJson.growableObj);
       //  console.log("profgender"+JSON.stringify(profileObj.GenderType));
          
-             if (message === 'profile not built yet' || message === 'internal server error!' || message === 'invalid token') {
+             if (message === 'Profile Not Built Yet' || message === 'Internal Server Error!' || message === 'invalid token') {
                  Toast.show(message); 
                   } else {
                 //Toast.show(message);

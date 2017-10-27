@@ -122,7 +122,7 @@ export default class HomeScreen extends Component {
              this.setState({loading_blur: false});
              this.setState({showComponent: true});
              console.log('message',message);
-             if (message1 === 'profile not built yet' || message1 === 'internal server error' || message1 === 'invalid token' ) {
+             if (message1 === 'Profile Not Built Yet' || message1 === 'Internal Server Error!' || message1 === 'invalid token' ) {
                  Toast.show(message1); 
                   } else {
               //  Toast.show(message);

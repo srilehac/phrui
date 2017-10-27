@@ -229,7 +229,7 @@ UserType: this.state.usertype
         var message = responseJson.message;
         console.log("message"+responseJson.message);
          
-       if (message == 'Internal server Error!' || message == 'User Already Registered !') {
+       if (message == 'Please Register !' || message == 'User Already Registered !') {
                  Toast.show(message); 
                   } else {
                 Toast.show(message);

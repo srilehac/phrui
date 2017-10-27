@@ -111,7 +111,7 @@ export default class HomeScreen extends Component {
         console.log("message"+responseJson.message);
         console.log('token'+token);
          
-       if (message === 'profile already built' || message === 'internal server error' ) {
+       if (message === 'Profile Already Built' || message === 'Internal Server Error' ) {
                  Toast.show(message); 
                   } else {
               //  Toast.show(message);
@@ -166,7 +166,7 @@ export default class HomeScreen extends Component {
              var message = responseJson.message;
            //  console.log("message"+JSON.stringify(profileObj.GenderType));
             // var message = message;  
-             if (message === 'profile not built yet' || message === 'internal server error' ) {
+             if (message === 'Profile of the user not built yet' || message === 'Internal Server Error!' ) {
                  Toast.show(message); 
                   } else {
               //  Toast.show(message);

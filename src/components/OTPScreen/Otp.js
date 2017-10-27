@@ -155,7 +155,7 @@ Phone: phone
        // var user = responseJson.user;
         console.log("message"+responseJson.message);
       //  console.log("user"+responseJson.user);
-       if (message === 'not a valid phone no' || message === 'cant fetch !' || message === 'Please enter a valid otp') {
+       if (message === 'Not a valid phone no' || message === 'Cant Fetch !' || message === 'Please enter a valid otp') {
                  Toast.show(message); 
                   }
                        else {
