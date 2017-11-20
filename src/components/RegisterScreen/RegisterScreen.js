@@ -193,57 +193,11 @@ onChangeText(text) {
        }
    });
 }
-
-
 onSubmitRegister() {
-  
-  let errors = new Object;
-  let i =0;
-  let test;
-  
-  this.setState({ errors });
-  
-  
-  return fetch(base_url + '/registerUser', {
-  method: 'POST',
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({ 
-     registerObj : {
-FirstName: this.state.fname,
-LastName:  this.state.lname,
-Phone:this.state.phone
-    },
-Email:this.state.email,
-Password:this.state.password,
-UserType: this.state.usertype
-
-
- })
-})
-
-.then((response) => response.json())
-      .then((responseJson) => {
-        var message = responseJson.message;
-        console.log("message"+responseJson.message);
-         
-       if (message == 'Please Register !' || message == 'User Already Registered !') {
-                 Toast.show(message); 
-                  } else {
-                Toast.show(message);
-                console.log("Otp page");
-               this.props.navigation.navigate('OtpPage',{Phone:this.state.phone});
-            }
-       
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-     // this.props.navigation.navigate('OtpPage');
-  
+  this.props.navigation.navigate('NominePage',{fname:this.state.fname,lname:this.state.lname,phone:this.state.phone,email:this.state.email,password:this.state.password});
 }
+
+
 updateRef(name, ref) {
   this[name] = ref;
 }
@@ -388,7 +342,7 @@ static navigationOptions = {
                    
                     
                   <CheckBox
-                  label='I agree Terms and Condations'
+                  label='I agree terms and conditions'
                  // checked={false}
                   //onChange={(checked) => console.log('I am checked', checked)}
                     />

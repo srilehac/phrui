@@ -8,7 +8,7 @@ export default {
     
     // Slash Screen
     splash_footer_line1: 'Powered by',
-    splash_footer_line2: 'RapidQube Digital Solutions Pvt. Ltd.',
+    splash_footer_line2: 'Tech  Mahindra.',
     
     // Login Screen
     login_welcome: 'Welcome to PHR Mobile App',
@@ -27,6 +27,7 @@ export default {
     nearby_profile: 'Hospitals Near Me',
     myfamily_members: 'My family Members',
     add_documents: 'Upload My Documents',
+    emergencycontacts:'Click for Emergency',
 
     // My Account
     login_labelmyfamily: 'My Family',

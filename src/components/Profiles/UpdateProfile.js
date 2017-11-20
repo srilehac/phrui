@@ -72,7 +72,7 @@ export default class UpdateProfile extends Component {
         blood: '',
         height: '',
         weight: '',
-        bloodpressure: '',
+        bloodpressure: ''/'',
         pulserate:'',
         tempture:'',
         diseasetype:'',
@@ -275,7 +275,7 @@ static navigationOptions = {
                         onChangeText={this.onChangeText}
                         onSubmitEditing={this.onSubmitBlood}
                         returnKeyType='next'
-                        label="Blood Group"
+                        label="Blood Type"
                         error={errors.blood}
                         tintColor={black}
                         textColor={black}
@@ -292,7 +292,7 @@ static navigationOptions = {
                         onChangeText={this.onChangeText}
                         onSubmitEditing={this.onSubmitHeight}
                         returnKeyType='next'
-                        label="Height(feet)"
+                        label="Height(foot)"
                         error={errors.height}
                         tintColor={black}
                         textColor={black}
@@ -309,7 +309,7 @@ static navigationOptions = {
                         onChangeText={this.onChangeText}
                         onSubmitEditing={this.onSubmitWeight}
                         returnKeyType='next'
-                        label="Weight(Kgs)"
+                        label="Weight(Ponds)"
                         error={errors.weight}
                         tintColor={black}
                         textColor={black}
@@ -364,7 +364,7 @@ static navigationOptions = {
                         onChangeText={this.onChangeText}
                         onSubmitEditing={this.onSubmitTempture}
                         returnKeyType='next'
-                        label="Body Tempture(Fahrenheit)"
+                        label="Body Temperature(Fahrenheit)"
                         error={errors.tempture}
                         tintColor={black}
                         textColor={black}
@@ -382,7 +382,7 @@ static navigationOptions = {
                         onFocus={this.onFocus}
                         onChangeText={this.onChangeText}
                         returnKeyType='next'
-                        label="Are you Suffering from any Disease?"
+                        label="Any recent medical issues?"
                         tintColor={white}
                         textColor={black}
                         style={container1}

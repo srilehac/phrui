@@ -42,7 +42,8 @@ const { username_label,
     create_account_text,
     create_account_link,
     add_documents,
-    myfamily_members
+    myfamily_members,
+    emergencycontacts
  } = customtext;
 const { loginscreenInputContainer,
     loginscreenContainer,
@@ -72,6 +73,7 @@ export default class HomeScreen extends Component {
         this.onUpdateProfile = this.onUpdateProfile.bind(this); 
         this.onViewProfile = this.onViewProfile.bind(this);
         this.onTerms = this.onTerms.bind(this);
+        this.onEmergencyContacts = this.onEmergencyContacts.bind(this);
        // this.onNearByhospital = this.onNearByhospital.bind(this);
         this.state = {
             position: 1,
@@ -183,7 +185,14 @@ export default class HomeScreen extends Component {
         
     }
     
-   
+    onEmergencyContacts(token){
+        console.log('token'+token);
+        console.log('GeoLocation');
+        
+
+      this.props.navigation.navigate('GeoLocationPage',{token:token});
+        
+    }
 
     onTerms(){
          Alert.alert(
@@ -232,8 +241,8 @@ export default class HomeScreen extends Component {
                                 <View style={homescreenLogo}>
                 <ImageSlider
                     images={[
-                        `https://bakertillykuwait.com/wp-content/uploads/2016/12/PHR-2.jpg`,                        ``,
-                        `http://phrplus.com/wp-content/uploads/2016/07/thumbnail_Infographic-1.jpg`,
+                        `https://bakertillykuwait.com/wp-content/uploads/2016/12/PHR-2.jpg`,                        
+                        `https://omowizard.files.wordpress.com/2010/04/defining-the-phr.jpg`,
                         `https://www.owu.edu/files/pages/medical-and-health-2.jpg`,
                         `https://oup.silverchair-cdn.com/ImageLibrary/contact-medical.png`,
                         `http://academicmedicineblog.org/wp-content/uploads/2014/10/medical-family1.jpg`,
@@ -295,6 +304,15 @@ export default class HomeScreen extends Component {
                         <RaisedTextButton 
                             onPress={()=>this.onFamilyProfile(token)} 
                             title={myfamily_members} 
+                            color={electricBlue} 
+                            titleColor={white} 
+                        />
+                        </View>
+
+                         <View style={homescreenalignmentNearbyhospital}>
+                        <RaisedTextButton 
+                            onPress={()=>this.onEmergencyContacts(token)} 
+                            title={emergencycontacts} 
                             color={electricBlue} 
                             titleColor={white} 
                         />

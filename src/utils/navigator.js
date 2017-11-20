@@ -22,7 +22,9 @@ import FamilyMember from '../components/Profiles/FamilyMember';
 import UploadFiles from '../components/Profiles/UploadFiles';
 import ViewMembers from '../components/Profiles/ViewMembers';
 import MembersInfo from '../components/Profiles/MembersInfo';
+import Nomine from '../components/Profiles/Nomine';
 //import ShareMembers from '../components/Profiles/ShareMembers';
+import GeoLocation from '../components/Profiles/GeoLocation';
 import ShareFamilyProfile from '../components/Profiles/ShareFamilyProfile';
 
 
@@ -48,6 +50,8 @@ export const Navigator  = StackNavigator({
   MembersInfoPage:{screen:MembersInfo},
   //ShareMembersPage:{screen:ShareMembers},
  FamilyMemberPage:{screen:FamilyMember},
+ NominePage:{screen:Nomine},
+ GeoLocationPage:{screen:GeoLocation},
  ShareFamilyProfilePage:{screen:ShareFamilyProfile}
 
 });

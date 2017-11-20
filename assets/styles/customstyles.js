@@ -42,7 +42,8 @@ module.exports = StyleSheet.create({
 
     subtitle: {
         color: black,
-        fontWeight: 'normal'
+         fontSize: 20,
+        fontWeight: 'bold'
     },
 
     subtitleWrapper: {
@@ -211,5 +212,9 @@ module.exports = StyleSheet.create({
        marginVertical: 15,
       paddingHorizontal: 10
        },
+    containerDate: {
+        width:315,
+        color: 'gainsboro'
+    },
         
 });

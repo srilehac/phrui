@@ -221,7 +221,7 @@ Phone: phone
                         source={require('../../../assets/images/fuegologo.jpg')}
                     />
 
-                    <Text style={loginTitle}>Please Enter Your OTP</Text>
+                    <Text style={loginTitle}>We just sent you a PIN please enter it below to continue</Text>
                 </View>
                 <ScrollView>
                 <View style={loginscreenregisterInput}>
@@ -237,7 +237,7 @@ Phone: phone
                         onChangeText={this.onChangeText}
                         onSubmitEditing={this.onSubmitUserName}
                         returnKeyType='next'
-                        label="OTP"
+                        label="PIN"
                         error={errors.username}
                         tintColor={black}
                         textColor={black}
