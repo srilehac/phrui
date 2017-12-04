@@ -1,8 +1,8 @@
 {
-  "packagerPort": 19002,
-  "packagerPid": 12804,
-  "expoServerPort": 19000,
-  "expoServerNgrokUrl": "https://fu-cj6.rahuldesai92.phr-working1.exp.direct",
-  "packagerNgrokUrl": "https://packager.fu-cj6.rahuldesai92.phr-working1.exp.direct",
-  "ngrokPid": 12908
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerPort": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
