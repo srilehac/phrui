@@ -23,6 +23,7 @@ import { RaisedTextButton } from 'react-native-material-buttons';
 import Toast from 'react-native-simple-toast';
 //import Prompt from 'react-native-prompt';
 import Button from 'react-native-button';
+import environment from '../../utils/environment';
 /*importing and using from const*/
 const { 
         loginscreenLogoContainer,
@@ -50,7 +51,7 @@ const { white,
  } = colors; 
    var i;
    var member;
-   
+const { base_url } = environment;
 
 export default class MembersInfo extends Component {
     constructor() {
@@ -178,7 +179,7 @@ export default class MembersInfo extends Component {
         });
 
         this.setState({ errors });
-        return fetch('http://192.168.1.21:8000/user/phoneverification', {
+        return fetch(base_url + '/user/phoneverification', {
   method: 'POST',
   headers: {
     'Accept': 'application/json',

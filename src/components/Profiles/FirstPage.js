@@ -153,7 +153,7 @@ export default class HomeScreen extends Component {
         console.log("ViewProfilePage");
         
 
-        return fetch('http://192.168.0.20:8000/getProfile', {
+        return fetch(base_url + '/getProfile', {
             method: 'GET',
             headers: {
 

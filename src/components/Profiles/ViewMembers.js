@@ -235,7 +235,7 @@ rapidID:member
         });
 
         this.setState({ errors });
-        return fetch('http://192.168.1.21:8000/user/phoneverification', {
+        return fetch(base_url + '/user/phoneverification', {
   method: 'POST',
   headers: {
     'Accept': 'application/json',
