@@ -2,8 +2,8 @@
  * Created by Rahuld on 2017/08/26
  */
 
-import { StackNavigator } from 'react-navigation'; // 1.0.0-beta.11
-import Fuego from '../components/SplashScreen/Fuego';
+import { createStackNavigator  } from 'react-navigation'; // 1.0.0-beta.11
+//import Fuego from '../components/SplashScreen/Fuego';
 import LoginScreen from '../components/LoginScreen/LoginScreen';
 import RegisterScreen from '../components/RegisterScreen/RegisterScreen';
 import HomeScreen from '../components/Home/HomeScreen';
@@ -26,11 +26,12 @@ import Nomine from '../components/Profiles/Nomine';
 //import ShareMembers from '../components/Profiles/ShareMembers';
 import GeoLocation from '../components/Profiles/GeoLocation';
 import ShareFamilyProfile from '../components/Profiles/ShareFamilyProfile';
+import SplashScreen from '../components/SplashScreen/SplashScreen';
 
 
 /*Routing at difernt page */
-export const Navigator  = StackNavigator({
-  SplashPage: {screen: Fuego},
+export const Navigator  = createStackNavigator ({
+  SplashPage: {screen: SplashScreen},
   LoginPage: {screen: LoginScreen},
   RegisterPage: {screen: RegisterScreen},
   HomePage: {screen: HomeScreen},

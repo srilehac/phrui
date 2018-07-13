@@ -21,7 +21,7 @@ import { TextField } from 'react-native-material-textfield';
 //import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { RaisedTextButton } from 'react-native-material-buttons';
 import Toast from 'react-native-simple-toast';
-import Prompt from 'react-native-prompt';
+//import Prompt from 'react-native-prompt';
 import Button from 'react-native-button';
 import environment from '../../utils/environment';
 /*importing and using from const*/
@@ -145,7 +145,7 @@ export default class ViewProfile extends Component {
             suppressHighlighting/>); */
     }
 
-    onSubmitShareReport(){
+    /*onSubmitShareReport(){
         Alert.alert(
         <Prompt
             title="Say something"
@@ -155,7 +155,7 @@ export default class ViewProfile extends Component {
             //onCancel={() => this.setState({ promptVisible: false, message: "You cancelled" })}
             onSubmit={(value) => this.setState({ promptVisible: false, message: `You said "${value}"` })}/>
       )
-    }
+    }*/
      onClickHome = (item) => {
          this.setState({basicNoTitleVisible: true});
         console.log('token',token);

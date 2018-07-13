@@ -21,7 +21,7 @@ import { TextField } from 'react-native-material-textfield';
 //import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { RaisedTextButton } from 'react-native-material-buttons';
 import Toast from 'react-native-simple-toast';
-import Prompt from 'react-native-prompt';
+//import Prompt from 'react-native-prompt';
 import Button from 'react-native-button';
 import environment from '../../utils/environment';
 /*importing and using from const*/
@@ -65,7 +65,7 @@ export default class ViewProfile extends Component {
         this.onAccessoryPress = this.onAccessoryPress.bind(this);
         this.OtpRef = this.updateRef.bind(this, 'Otp');
         this.renderOtpAccessory = this.renderOtpAccessory.bind(this);
-        this.onSubmitShareReport = this.onSubmitShareReport.bind(this);
+        //this.onSubmitShareReport = this.onSubmitShareReport.bind(this);
         this.onClickHome = this.onClickHome.bind(this);
         this.onClickShare = this.onClickShare.bind(this);
         
@@ -141,7 +141,7 @@ export default class ViewProfile extends Component {
             suppressHighlighting/>); */
     }
 
-    onSubmitShareReport(){
+   /* onSubmitShareReport(){
         Alert.alert(
         <Prompt
             title="Say something"
@@ -151,7 +151,7 @@ export default class ViewProfile extends Component {
             //onCancel={() => this.setState({ promptVisible: false, message: "You cancelled" })}
             onSubmit={(value) => this.setState({ promptVisible: false, message: `You said "${value}"` })}/>
       )
-    }
+    }*/
     onClickHome(token){
         console.log("Homepage");
         console.log('token',token);

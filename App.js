@@ -1,6 +1,5 @@
 import React from 'react';
-import { Component} from 'react-native';
-import { View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Navigator } from './src/utils/navigator';
 
 /*rendering towards navigator from where it will be routed to different pages */
@@ -9,3 +8,22 @@ export default class App extends React.Component {
     return <Navigator />
   }
 }
+
+// export default class App extends React.Component {
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <Text>Open up App.js to start working on your app!</Text>
+//       </View>
+//     );
+//   }
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });

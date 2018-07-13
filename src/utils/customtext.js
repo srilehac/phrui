@@ -8,7 +8,7 @@ export default {
     
     // Slash Screen
     splash_footer_line1: 'Powered by',
-    splash_footer_line2: 'Tech  Mahindra.',
+    splash_footer_line2: 'RapidQube Digital Solutions Pvt. Ltd.',
     
     // Login Screen
     login_welcome: 'Welcome to PHR Mobile App',

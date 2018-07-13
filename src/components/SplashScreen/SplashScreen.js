@@ -5,7 +5,7 @@ import { Text,
          ActivityIndicator, 
          Image 
         } from 'react-native';
-import { NavigationActions } from 'react-navigation';
+import { NavigationActions, StackActions } from 'react-navigation';
 import customstyles from '../../../assets/styles/customstyles';
 import customtext from '../../utils/customtext';
 import customcolors from '../../utils/colors';
@@ -31,7 +31,7 @@ export default class SplashScreen extends Component {
         header: null,
     }
     componentDidMount() {
-        const resetAction = NavigationActions.reset({
+        const resetAction = StackActions.reset({
             index: 0,
             actions: [
                 NavigationActions.navigate({ routeName: 'LoginPage'})
