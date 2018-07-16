@@ -52,13 +52,12 @@ export default {
     Otp_message:'Please Enter your OTP below to get verified',
     Otp_label:'Enter OTP here',
     Otp_button:'Submit',
+    Otp_success_message: "Your OTP has been validated against your registered mobile number",
 
     //FirstPage
     login_addfamilymembers:'Add Member',
     login_viewfamilymembers:'View',
 
     //FamilyMember
-    user_id:'RapidId',
-
-
+    user_id:'RapidId'
 }
