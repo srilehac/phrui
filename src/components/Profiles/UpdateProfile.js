@@ -327,7 +327,7 @@ export default class UpdateProfile extends Component {
               tintColor={black}
               textColor={black}
               onBlur={this.onBlur}
-              placeholder="Ex. 50/120, 90/180"
+              placeholder="Ex. 80/120"
             />
             <TextField
               ref={this.pulserateRef}
@@ -345,7 +345,7 @@ export default class UpdateProfile extends Component {
               tintColor={black}
               textColor={black}
               onBlur={this.onBlur}
-              placeholder="Ex. 80, 50"
+              placeholder="Ex. 72"
             />
             <TextField
               ref={this.temptureRef}
@@ -363,7 +363,7 @@ export default class UpdateProfile extends Component {
               tintColor={black}
               textColor={black}
               onBlur={this.onBlur}
-              placeholder="Ex. 90, 70"
+              placeholder="Ex. 98.3"
             />
             <Dropdown 
               ref={this.diseasetypeRef}
@@ -380,8 +380,9 @@ export default class UpdateProfile extends Component {
               textColor={black}
               style={container1}
               onBlur={this.onBlur}
-              placeholder="Mention 'none' if no medical issues"
+              placeholder="Select Yes/No"
             />
+            
             <TextField
               ref={this.remarksRef}
               value={data.remarks}
@@ -398,7 +399,7 @@ export default class UpdateProfile extends Component {
               tintColor={black}
               textColor={black}
               onBlur={this.onBlur}
-              placeholder="Comments"
+              placeholder="Comments none if no medical issues"
             />
             <View style={loginscreenLoginContainer}>
               <RaisedTextButton 
