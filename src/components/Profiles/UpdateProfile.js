@@ -210,7 +210,7 @@ export default class UpdateProfile extends Component {
         } else {
             Toast.show(message);
             console.log("HomePage");
-            this.props.navigation.navigate('HomePage',{token,token});
+            this.props.navigation.navigate('HomePage',{token:token});
           }       
       }).catch((error) => {
         console.error(error);
@@ -241,8 +241,8 @@ export default class UpdateProfile extends Component {
   
   render() {
     var {params} = this.props.navigation.state;
-    var token = "";
-    console.log('token' + token);
+    var token = params.token
+   console.log("token",token)
     let { errors = {}, secureTextEntry, ...data } = this.state;
     let { blood = 'blood' } = data;
     let { height = 'height' } = data;
