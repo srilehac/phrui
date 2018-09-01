@@ -1,8 +1,8 @@
 {
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerPort": 19002,
+  "packagerPort": 19003,
+  "packagerPid": 142003,
+  "expoServerNgrokUrl": "https://4u-b6d.srileha.phr-ui-modified.exp.direct",
+  "packagerNgrokUrl": "https://packager.4u-b6d.srileha.phr-ui-modified.exp.direct",
+  "ngrokPid": 142119
 }

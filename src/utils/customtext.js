@@ -28,6 +28,7 @@ export default {
     myfamily_members: 'My family Members',
     add_documents: 'Upload My Documents',
     emergencycontacts:'Click for Emergency',
+    logout : 'logout',
 
     // My Account
     login_labelmyfamily: 'My Family',

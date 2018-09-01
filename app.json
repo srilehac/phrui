@@ -21,7 +21,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.RPQB.PHR"
     },
     "android": {
       "package": "com.RPQB.PHR"

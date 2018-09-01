@@ -29,7 +29,7 @@ import ShareFamilyProfile from '../components/Profiles/ShareFamilyProfile';
 import SplashScreen from '../components/SplashScreen/SplashScreen';
 
 
-/*Routing at difernt page */
+/*Routing at differnt page */
 export const Navigator  = createStackNavigator ({
   SplashPage: {screen: SplashScreen},
   LoginPage: {screen: LoginScreen},
@@ -44,6 +44,7 @@ export const Navigator  = createStackNavigator ({
   UpdateProfilePage:{screen:UpdateProfile},
   ViewProfilePage:{screen:ViewProfile},
  ShareProfilePage:{screen:ShareProfile},
+ LoginScreenPage :{screen :LoginScreen},
   //NearByHospitalPage:{screen:NearbyHospital}
   ViewMemberPage:{screen:ViewMembers},
   FirstProfilePage:{screen:FirstPage},

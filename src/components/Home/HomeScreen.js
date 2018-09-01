@@ -48,7 +48,8 @@ const {
     create_account_link,
     add_documents,
     myfamily_members,
-    emergencycontacts
+    emergencycontacts,
+    logout
 } = customtext;
 
 const { 
@@ -62,17 +63,19 @@ const {
     homescreenalignmentNearbyhospital,
     homescreenLogo,
     headerStyle,
-    loginscreenLoginContainer
+    loginscreenLoginContainer,
+    homescreenalignmentLogout,
 } = customstyles;
 
 const { 
     white,
     black,
-    electricBlue
+    electricBlue,
 } = colors;
 
 const { base_url } = environment;
 var user;
+var Name;
 
 export default class HomeScreen extends Component {
     constructor() {
@@ -82,6 +85,7 @@ export default class HomeScreen extends Component {
         this.onViewProfile = this.onViewProfile.bind(this);
         this.onTerms = this.onTerms.bind(this);
         this.onEmergencyContacts = this.onEmergencyContacts.bind(this);
+        this.onLogout = this.onLogout.bind(this);
         // this.onNearByhospital = this.onNearByhospital.bind(this);
         this.state = {
             position: 1,
@@ -132,9 +136,45 @@ export default class HomeScreen extends Component {
     }
 
     onUpdateProfile(token) {
+
         console.log("UpdateprofilePage");
+
         console.log('token'+token);
-        this.props.navigation.navigate('UpdateProfilePage', {token:token});
+
+        let errors = {};
+
+        this.setState({ errors });
+
+        return fetch(base_url + '/updatebuild', {
+
+            method: 'GET',
+
+            headers: {
+
+                'Content-Type': 'application/json',
+
+                'x-access-token': token
+
+            }
+
+        })
+
+        .then((response) => response.json())
+
+        .then((responseJson) => {
+
+            var message = responseJson.message;
+
+            console.log("message"+responseJson.message);
+
+            var Name = responseJson.profileObj.name;
+
+            console.log("Name",Name);
+
+        this.props.navigation.navigate('UpdateProfilePage', {token:token,Name:Name});
+
+        })
+
     }
 
     onFamilyProfile(token) {
@@ -186,6 +226,11 @@ export default class HomeScreen extends Component {
         console.log('GeoLocation');
         this.props.navigation.navigate('GeoLocationPage',{token:token});
     }
+    onLogout(token) {
+        console.log('token'+token);
+        console.log('LoginScreenPage');
+        this.props.navigation.navigate('LoginScreenPage',{token:token});
+    }
 
     onTerms() {
         Alert.alert('Once Profile is Build it cannot be rebuild.')
@@ -210,6 +255,8 @@ export default class HomeScreen extends Component {
         var token = params.token
         user = params.user
         console.log("user"+user);
+        Name = params.Name;
+        console.log("Name",+Name);
         // var rapidId=params.rapidID
         // console.log("inhomepage"+rapidId)
         let { errors = {}, secureTextEntry, ...data } = this.state;
@@ -304,8 +351,22 @@ export default class HomeScreen extends Component {
                                         titleColor={white} 
                                     />
                                 </View>
+                                
+                                
+                             
+    
+    
+    
+                            <View style={homescreenalignmentLogout}>
+                                    <RaisedTextButton 
+                                        onPress={()=>this.onLogout(token)} 
+                                        title={logout} 
+                                        color={electricBlue} 
+                                        titleColor={white} 
+                                    />
+                            </View> 
                             </View>
-                        </View>
+                                </View>
                     </View>
                 </ScrollView>
                 { /* Due to parent child relation of (this.props.navigation.navigate)

@@ -102,7 +102,7 @@ onBlur() {
   
   ['name', 'pname','dob', 'medicalhistory','address' ]
   .forEach((name) => {
-      console.log("Name: " + name);
+      console.log("name: ",name);
       let value = this[name].value();
       console.log("Value: " + value);
       
@@ -187,14 +187,16 @@ GenderType: this.state.gendertype
       .then((responseJson) => {
         var message = responseJson.message;
         console.log("message"+responseJson.message);
+        var Name= responseJson.report.name;
+        console.log("Name",+Name);
         console.log('token'+token);
-         
        if (message === 'Internal server Error!' || message === 'invalid request' || message === 'invalid token') {
-                 Toast.show(message); 
+                 Toast.show(message);
                   } else {
                 Toast.show(message);
                 console.log("HomePage");
-               this.props.navigation.navigate('HomePage',{token:token});
+                console.log(Name,"sri");
+               this.props.navigation.push('HomePage',{token:token,Name:Name});
             }
        
       })
@@ -364,3 +366,7 @@ const genderType = [
   { value: 'Male' },
   { value: 'Female' }, 
 ];
+
+
+
+

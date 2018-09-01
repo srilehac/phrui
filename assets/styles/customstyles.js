@@ -132,6 +132,11 @@ module.exports = StyleSheet.create({
     homescreenalignmentNearbyhospital:{
         paddingTop : 20
     },
+    
+    homescreenalignmentLogout:{
+        paddingTop : 20
+    },
+
 
     loginscreenCreateAccountContainer: {
         flex: 1

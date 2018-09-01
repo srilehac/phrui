@@ -55,7 +55,7 @@ export default class SplashScreen extends Component {
                     <View style={loginscreenLogoContainer}>
                         <Image
                             style={loginscreenLogo}
-                            source={require('../../../assets/images/logo.png')}
+                            source={require('../../../assets/images/fuegologo.jpg')}
                         />
                     </View>
                     <Text style={title}>{app_name}</Text>

@@ -134,9 +134,11 @@ export default class UpdateProfile extends Component {
             }
             if (name === 'weight' && value.length < 2) {
               errors[name] = 'please enter validnumber';
+              
             }
             if (name === 'bloodpressure' && value.length < 2) {
               errors[name] = 'please enter a valid bloodpressure';
+              
             }
             if (name === 'pulserate' && value.length < 2) {
               errors[name] = 'please enter a valid pulserate';
@@ -242,6 +244,8 @@ export default class UpdateProfile extends Component {
   render() {
     var {params} = this.props.navigation.state;
     var token = params.token
+    var Name = params.Name
+    console.log("Name",Name)
    console.log("token",token)
     let { errors = {}, secureTextEntry, ...data } = this.state;
     let { blood = 'blood' } = data;
@@ -257,6 +261,9 @@ export default class UpdateProfile extends Component {
       <KeyboardAvoidingView behavior="padding" style={loginscreenregisterContainer}>
         <ScrollView>            
           <View style={loginscreenregisterInput}>
+            
+            <Text Name = {Name}> </Text>
+
             <TextField
               ref={this.bloodRef}
               value={data.blood}
