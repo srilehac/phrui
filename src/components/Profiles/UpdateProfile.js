@@ -244,8 +244,8 @@ export default class UpdateProfile extends Component {
   render() {
     var {params} = this.props.navigation.state;
     var token = params.token
-    var Name = params.Name
-    console.log("Name",Name)
+    var name = params.name
+    console.log("name",name)
    console.log("token",token)
     let { errors = {}, secureTextEntry, ...data } = this.state;
     let { blood = 'blood' } = data;
@@ -262,7 +262,7 @@ export default class UpdateProfile extends Component {
         <ScrollView>            
           <View style={loginscreenregisterInput}>
             
-            <Text Name = {Name}> </Text>
+            <Text style={customstyles.MyPorfileView}> name = {name} </Text>
 
             <TextField
               ref={this.bloodRef}

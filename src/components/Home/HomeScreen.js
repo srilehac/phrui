@@ -137,45 +137,43 @@ export default class HomeScreen extends Component {
 
     onUpdateProfile(token) {
 
-        console.log("UpdateprofilePage");
-
+        console.log("UpdatebuildprofilePage");
         console.log('token'+token);
 
         let errors = {};
-
         this.setState({ errors });
 
-        return fetch(base_url + '/updatebuild', {
+        //console.log('check'+check);
+
+        return fetch(base_url + '/updatebuild',{
 
             method: 'GET',
-
             headers: {
-
                 'Content-Type': 'application/json',
-
                 'x-access-token': token
 
             }
 
-        })
+        }).then((response) => response.json()).then((responseJson) => {
 
-        .then((response) => response.json())
+           console.log("responseJson",responseJson);
 
-        .then((responseJson) => {
+           var message = responseJson.message;
 
-            var message = responseJson.message;
+            console.log("message",responseJson.message);
 
-            console.log("message"+responseJson.message);
+           var name = responseJson.profileObj.Name;
 
-            var Name = responseJson.profileObj.name;
+           console.log("name",name);
 
-            console.log("Name",Name);
+        this.props.navigation.navigate('UpdateProfilePage', {token:token,name:name});
 
-        this.props.navigation.navigate('UpdateProfilePage', {token:token,Name:Name});
-
-        })
-
+        }).catch((error) => {
+            console.error(error);
+        });
     }
+
+
 
     onFamilyProfile(token) {
         console.log("FamilyProfile");
@@ -255,8 +253,6 @@ export default class HomeScreen extends Component {
         var token = params.token
         user = params.user
         console.log("user"+user);
-        Name = params.Name;
-        console.log("Name",+Name);
         // var rapidId=params.rapidID
         // console.log("inhomepage"+rapidId)
         let { errors = {}, secureTextEntry, ...data } = this.state;
@@ -352,11 +348,6 @@ export default class HomeScreen extends Component {
                                     />
                                 </View>
                                 
-                                
-                             
-    
-    
-    
                             <View style={homescreenalignmentLogout}>
                                     <RaisedTextButton 
                                         onPress={()=>this.onLogout(token)} 

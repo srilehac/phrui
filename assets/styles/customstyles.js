@@ -195,7 +195,7 @@ module.exports = StyleSheet.create({
 
     MyPorfileView :{
         flex: 1,
-        color: white
+        color: black
 
     },
 
